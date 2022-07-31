@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import EventDetails from "../views/EventDetailView.vue";
 import AirlineDetails from "../views/AirlineDetails.vue";
 import PageNotFound from "../views/event/PageNotFound.vue";
+import ResourceNotFound from "../views/event/ResourceNotFound.vue";
 
 const routes = [
   {
@@ -35,6 +36,12 @@ const routes = [
     path: "/:catchAll(.*)",
     name: "PageNotFound",
     component: PageNotFound,
+  },
+  {
+    path: "/404/:resource",
+    name: "404Resource",
+    component: ResourceNotFound,
+    props: true,
   },
 ];
 
